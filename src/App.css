@@ -29,11 +29,46 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-box {
+  
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  width: 40%;
+}
+
+.sub-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0);
+  width: 75%;
+}
+
+.extra-weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0);
+}
+.future-weather {
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }

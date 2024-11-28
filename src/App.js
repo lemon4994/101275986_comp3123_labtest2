@@ -3,6 +3,8 @@ import './App.css';
 import { useState } from 'react';
 import WeatherDisplay from './Weather'
 import { getWeatherData } from './api'
+import ExtraStats from './ExtraStats'
+import FutureStats from './FutureStats';
 
 function App() {
   const [city, setCity] = useState("Toronto")  
@@ -15,13 +17,20 @@ function App() {
       console.error(error)
     }
   }
+  
 
   return (
     <div className="App">
       <header className="App-header">
         <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="City name"/>
         <button onClick={() => getWeather(city)}>Get Weather</button>
-        {weather && <WeatherDisplay weather={weather} />}
+        <div className="weather-container">
+          {weather && <WeatherDisplay weather={weather} />}
+          <div className="sub-box">
+          {weather && <ExtraStats weather={weather} />}
+          {weather && <FutureStats weather={weather} />}
+          </div>
+        </div>
       </header>
     </div>
   );
