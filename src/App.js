@@ -3,16 +3,20 @@ import './App.css';
 import { useState } from 'react';
 import WeatherDisplay from './Weather'
 import { getWeatherData } from './api'
+import { getWeatherFuture } from './api'  
 import ExtraStats from './ExtraStats'
 import FutureStats from './FutureStats';
 
 function App() {
   const [city, setCity] = useState("Toronto")  
   const [weather, setWeather] = useState(null)
+  const [futureWeather, setFutureWeather] = useState(null)
   const getWeather = async (city) => {
     try {
       const data = await getWeatherData(city);
       setWeather(data);
+      const futureData = await getWeatherFuture(city);
+      setFutureWeather(futureData);
     } catch (error) {
       console.error(error)
     }
@@ -28,7 +32,7 @@ function App() {
           {weather && <WeatherDisplay weather={weather} />}
           <div className="sub-box">
           {weather && <ExtraStats weather={weather} />}
-          {weather && <FutureStats weather={weather} />}
+          {futureWeather && <FutureStats futureWeather={futureWeather} />} 
           </div>
         </div>
       </header>
