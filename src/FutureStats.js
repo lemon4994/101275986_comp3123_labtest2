@@ -9,6 +9,7 @@ function FutureStats({ futureWeather }) {
                 <h3>Tomorrow</h3>
                 <img src={`https://openweathermap.org/img/wn/${futureWeather.list[8].weather[0].icon}@2x.png`} alt="Weather Condition Icon" />
                 <p>{Math.round(futureWeather.list[8].main.temp - 273.15)}°C</p>
+                {/*this is basically a super simplifed version of Weather.js*/}
             </div>
             <div>
                 <h3>2 Days</h3>
