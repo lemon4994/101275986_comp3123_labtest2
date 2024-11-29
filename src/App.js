@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import WeatherDisplay from './Weather'
 import { getWeatherData } from './api'
 import { getWeatherFuture } from './api'  
@@ -22,6 +22,9 @@ function App() {
     }
   }
   
+  useEffect(() => {
+    getWeather(city);
+  }, [city]);
 
   return (
     <div className="App">
