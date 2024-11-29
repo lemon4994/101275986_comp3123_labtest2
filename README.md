@@ -1,6 +1,6 @@
 # Documentation
 
-Simply type your city name into the box and click the Get Weather button
+Simply type your city name into the box to automatically get weather
 
 Your current weather is displayed on the left side
 
