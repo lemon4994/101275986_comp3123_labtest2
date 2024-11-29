@@ -30,7 +30,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="City name"/>
-        <button onClick={() => getWeather(city)}>Get Weather</button> {/*button that gets data*/}
         <div className="weather-container">
           {weather && <WeatherDisplay weather={weather} />} {/*this displays the current weather*/}
           <div className="sub-box">
