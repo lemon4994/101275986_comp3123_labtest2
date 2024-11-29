@@ -24,7 +24,8 @@ function App() {
   
   useEffect(() => {
     getWeather(city);
-  }, [city]); //this lets me load Toronto by default instead of displaying nothing
+  }, [city]);
+  //this lets me load Toronto by default instead of displaying nothing and also loads while typing
 
   return (
     <div className="App">
